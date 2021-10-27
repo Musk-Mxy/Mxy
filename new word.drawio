@@ -1,1 +1,96 @@
-<mxfile host="app.diagrams.net" modified="2021-10-27T00:51:45.826Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" version="15.5.9" etag="Qw_ZTZzvR_TI7zwV_65e" type="github"><diagram id="n3uPvzGnpjgBGxto84hB">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2021-10-27T08:36:06.009Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="_oxFDLtYL6lg0MSYvvNY" version="15.5.9" type="github">
+  <diagram id="n3uPvzGnpjgBGxto84hB" name="第 1 页">
+    <mxGraphModel dx="1117" dy="574" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-1" value="新词抽取" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="200" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-1" source="Eq5f1CzCDV_B1iFPYSIY-2" target="Eq5f1CzCDV_B1iFPYSIY-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-2" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;获取数据&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-1">
+          <mxGeometry x="20" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-1" source="Eq5f1CzCDV_B1iFPYSIY-3" target="Eq5f1CzCDV_B1iFPYSIY-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-3" value="&lt;div class=&quot;mind-clipboard&quot;&gt;jieba分词&lt;div&gt;（并进行处理）&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-1">
+          <mxGeometry x="20" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-1" source="Eq5f1CzCDV_B1iFPYSIY-4" target="Eq5f1CzCDV_B1iFPYSIY-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-4" value="&lt;div class=&quot;mind-clipboard&quot;&gt;Kenlm模型训练&lt;div&gt;（可限制内存）&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-1">
+          <mxGeometry x="20" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-5" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;输出chunck词以及对应的score&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-1">
+          <mxGeometry x="20" y="440" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-6" value="新词过滤" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="361" y="80" width="400" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-6" source="Eq5f1CzCDV_B1iFPYSIY-7" target="Eq5f1CzCDV_B1iFPYSIY-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-6" source="Eq5f1CzCDV_B1iFPYSIY-7" target="Eq5f1CzCDV_B1iFPYSIY-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-6" source="Eq5f1CzCDV_B1iFPYSIY-7" target="Eq5f1CzCDV_B1iFPYSIY-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-7" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;根据各种校验规则对chunck词进行过滤&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-6">
+          <mxGeometry x="20" y="120" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-8" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;强过滤规则&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-6">
+          <mxGeometry x="220" y="40" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-9" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;弱过滤规则&lt;br&gt;（若新词存在再复旦词库）&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-6">
+          <mxGeometry x="220" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-12" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;输出过滤后的有效词&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-6">
+          <mxGeometry x="20" y="431" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-17" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="Eq5f1CzCDV_B1iFPYSIY-5" target="Eq5f1CzCDV_B1iFPYSIY-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-18" value="新词共现" style="swimlane;" vertex="1" parent="1">
+          <mxGeometry x="880" y="80" width="200" height="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-18" source="Eq5f1CzCDV_B1iFPYSIY-20" target="Eq5f1CzCDV_B1iFPYSIY-22">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-20" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;根据有效词抽取每次文档的新词&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-18">
+          <mxGeometry x="20" y="80" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-18" source="Eq5f1CzCDV_B1iFPYSIY-22" target="Eq5f1CzCDV_B1iFPYSIY-24">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-22" value="&lt;div class=&quot;mind-clipboard&quot;&gt;&lt;div class=&quot;mind-clipboard&quot;&gt;计算有效词的&lt;div&gt;共现频率&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-18">
+          <mxGeometry x="20" y="200" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="Eq5f1CzCDV_B1iFPYSIY-18" source="Eq5f1CzCDV_B1iFPYSIY-24" target="Eq5f1CzCDV_B1iFPYSIY-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-24" value="&lt;div class=&quot;mind-clipboard&quot;&gt;&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;输出新词label、新词共现关系label2label、文档与新词关系label2document&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-18">
+          <mxGeometry x="20" y="320" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-25" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;写入Mongodb&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="Eq5f1CzCDV_B1iFPYSIY-18">
+          <mxGeometry x="20" y="440" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-26" value="&lt;span style=&quot;color: rgb(50 , 50 , 50) ; font-size: 13px ; background-color: rgba(255 , 255 , 255 , 0.01)&quot;&gt;&lt;b&gt;新词发现&lt;/b&gt;&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="40" width="1000" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Eq5f1CzCDV_B1iFPYSIY-27" value="读取文档数据" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="Eq5f1CzCDV_B1iFPYSIY-12" target="Eq5f1CzCDV_B1iFPYSIY-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="820" y="541" />
+              <mxPoint x="820" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
